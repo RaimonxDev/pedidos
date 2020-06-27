@@ -1,15 +1,15 @@
-<!-- <mat-accordion *ngFor="let marca of getMarcas()">
+<mat-accordion *ngFor="let marca of productoOrdenados">
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Marca: {{marca}}
+        Marca: {{marca.marca}}
       </mat-panel-title>
     </mat-expansion-panel-header>
 
     <mat-selection-list>
 
-      <mat-list-item *ngFor="let prod of getProductosPorMarca(marca)">
+      <mat-list-item *ngFor="let prod of marca.items">
         {{prod.PRODUCTO}}
 
           <mat-form-field class="example-form-field">
@@ -25,4 +25,4 @@
     </mat-selection-list>
 
   </mat-expansion-panel>
-</mat-accordion> -->
+</mat-accordion>

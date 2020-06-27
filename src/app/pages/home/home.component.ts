@@ -15,13 +15,13 @@ export class HomeComponent implements OnInit {
   productos: Productos[]= this.data.getProductos();
   marcas: string[]= [];
   panelOpenState = false;
-  final = []
+  productoOrdenados = []
   forma: FormGroup
 
   constructor(private data: DataService)
   {
     this.getProductosPorMarca()
-    console.log(this.final);
+    console.log(this.productoOrdenados);
   }
 
   ngOnInit(): void {}
@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
 
       let items = filter(this.productos,{"MARCA": marca})
 
-      this.final.push({"marca": marca, "items": items})
+      this.productoOrdenados.push({"marca": marca, "items": items})
 
     })
 
